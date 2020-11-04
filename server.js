@@ -17,6 +17,8 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://talmageluke:hangpassword@cluster0.jyodq.mongodb.net/budget_db?retryWrites=true&w=majority", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false
 });
 
